@@ -1,0 +1,54 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.isa.sahabatbunda.Ibu"
+    >
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/ibuHamil"
+        android:background="@drawable/button_ibu_hamil"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/ibuNifas"
+        android:background="@drawable/button_ibu_nifas"
+        android:layout_row="0"
+        android:layout_column="2" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/ibuKB"
+        android:background="@drawable/button_ibu_kabe"
+        android:layout_row="2"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_row="1"
+        android:layout_column="0"
+        android:text="Ibu Hamil"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_row="1"
+        android:layout_column="2"
+        android:text="Ibu Nifas"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_row="3"
+        android:layout_column="0"
+        android:text="Ibu Nifas"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+</GridLayout>

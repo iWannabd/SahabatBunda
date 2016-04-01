@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SahabatBunda</string>
+    <string name="title_activity_main">Sahabat Bunda</string>
+    <string name="title_activity_ibuhamil">Menu Ibu Hamil</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>
