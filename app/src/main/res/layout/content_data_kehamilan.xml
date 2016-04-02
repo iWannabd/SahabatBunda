@@ -12,11 +12,5 @@
     tools:context="com.isa.sahabatbunda.DataKehamilan"
     tools:showIn="@layout/activity_data_kehamilan">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listHamil"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

@@ -7,5 +7,11 @@
     <string name="title_activity_data_kehamilan">Data Kehamilan</string>
     <string name="title_activity_kehamilan_baru">Kehamilan Baru</string>
 
+    <string-array name="jarak_kehamilan">
+        <item>Kurang dari 2 tahun</item>
+        <item>Lebih dari 2 tahun dan Kurang dari 5 tahun</item>
+        <item>Lebih dari 5 tahun</item>
+    </string-array>
+
 
 </resources>
