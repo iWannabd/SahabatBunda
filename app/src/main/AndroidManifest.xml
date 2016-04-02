@@ -18,7 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IbuHamil"></activity>
+        <activity android:name=".IbuHamil" />
+        <activity
+            android:name=".DataKehamilan"
+            android:label="@string/title_activity_data_kehamilan"
+            android:parentActivityName=".IbuHamil"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.isa.sahabatbunda.IbuHamil" />
+        </activity>
+        <activity android:name=".TambahKehamilan"></activity>
     </application>
 
 </manifest>

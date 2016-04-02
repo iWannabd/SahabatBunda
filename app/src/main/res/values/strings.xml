@@ -4,6 +4,8 @@
     <string name="title_activity_ibuhamil">Menu Ibu Hamil</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_data_kehamilan">Data Kehamilan</string>
+    <string name="title_activity_kehamilan_baru">Kehamilan Baru</string>
 
 
 </resources>
