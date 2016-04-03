@@ -28,9 +28,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.isa.sahabatbunda.IbuHamil" />
         </activity>
-        <activity android:name=".Amnesa"
-            android:label="@string/title_activity_kehamilan_baru"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Amnesa"
+            android:label="@string/title_activity_amnesa"
+            android:parentActivityName=".DataKehamilan"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.isa.sahabatbunda.DataKehamilan" />
+        </activity>
     </application>
 
 </manifest>

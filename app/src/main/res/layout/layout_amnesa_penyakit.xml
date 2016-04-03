@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorPrimary">
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Darah Tinggi"
-        android:id="@+id/DarahTinggi"
+        android:id="@+id/darting"
         android:layout_below="@+id/Header"
         android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true" />
@@ -41,41 +41,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gula"
-        android:id="@+id/Gula"
+        android:id="@+id/gula"
         android:layout_below="@+id/Header"
-        android:layout_toRightOf="@id/DarahTinggi"
+        android:layout_toRightOf="@id/darting"
         android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Asma"
-        android:id="@+id/Asma"
+        android:id="@+id/asma"
         android:layout_below="@+id/Header"
-        android:layout_toRightOf="@id/Gula"
+        android:layout_toRightOf="@id/gula"
         android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Asma"
-        android:id="@+id/Jantung"
-        android:layout_below="@+id/DarahTinggi" />
+        android:text="Jantung"
+        android:id="@+id/jantung"
+        android:layout_below="@+id/darting" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lainnya"
-        android:id="@+id/Sakitlain"
-        android:layout_toRightOf="@id/Jantung"
-        android:layout_below="@+id/DarahTinggi" />
+        android:id="@+id/lain"
+        android:layout_toRightOf="@id/jantung"
+        android:layout_below="@+id/darting" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kontrasepsi"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/Asma"
+        android:layout_below="@+id/jantung"
         android:inputType="text"
         android:hint="Riwayat Kontrasepsi"/>
 
@@ -132,6 +132,18 @@
         android:inputType="number"
         android:hint="Imunisasi TT5 pada tahun"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Penyakit Turunan"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/imun5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="0dp"/>
+
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -147,7 +159,7 @@
         android:text="Gula"
         android:id="@+id/Gulax"
         android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@id/DarahTinggi"
+        android:layout_toRightOf="@id/DarahTinggix"
         android:layout_centerHorizontal="true" />
 
     <CheckBox
@@ -155,28 +167,28 @@
         android:layout_height="wrap_content"
         android:text="Asma / Sesak Nafas"
         android:id="@+id/Asmax"
-        android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@id/Gula"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@id/DarahTinggix"
+        android:layout_toRightOf="@+id/Jantungx" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Asma"
+        android:text="Jantung"
         android:id="@+id/Jantungx"
-        android:layout_below="@+id/DarahTinggix" />
+        android:layout_below="@+id/DarahTinggix"
+        android:layout_toRightOf="@id/Jantungx"/>
 
-    <TextView
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Penyakit Turunan"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/imun5"
+        android:layout_below="@+id/Jantungx"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:text="simpan"
+        android:background="@color/colorAccent"
         android:textColor="#fff"
-        android:layout_marginBottom="0dp"/>
+        android:layout_marginTop="20dp"
+        android:id="@+id/save1"/>
 
 
 

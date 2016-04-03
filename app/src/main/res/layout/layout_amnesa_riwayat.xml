@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorPrimary">
 
@@ -34,7 +34,7 @@
         android:inputType="date"
         android:id="@+id/tanggalHaid"
         android:layout_below="@id/Header"
-        android:hint="Hari Pertama Haid Terahir"/>
+        android:hint="Hari Pertama Haid Terahir M/d/yyyy"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -65,7 +65,7 @@
         android:hint="Hamil ke"/>
 
     <EditText
-        android:layout_width="185dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:id="@+id/melahirkan"
@@ -74,7 +74,7 @@
         android:hint="Jumlah melahirkan"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:id="@+id/keguguran"
@@ -174,11 +174,12 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dokter"
+        android:text="Lainnya"
         android:id="@+id/penolongLain"
         android:layout_below="@+id/textView3"
         android:layout_toRightOf="@id/penolongDokter"
         android:layout_centerHorizontal="true" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -215,6 +216,17 @@
         android:layout_below="@+id/berat2"
         android:layout_centerHorizontal="true"
         android:hint="lebih dari 4 Kg pada anak ke-"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/berat3"
+        android:layout_centerHorizontal="true"
+        android:text="simpan"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:id="@+id/save"/>
 
 
 
