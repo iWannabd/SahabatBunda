@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.joda.time.DateTime;
 import org.joda.time.Weeks;
@@ -18,7 +17,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.SimpleTimeZone;
 
 public class DataKehamilan extends AppCompatActivity {
     public static final String AMNESA = "AMNESA";
@@ -50,6 +48,7 @@ public class DataKehamilan extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(getBaseContext(),Amnesa.class));
+//                    startActivity(new Intent(getBaseContext(),PemeriksaanAmnesa.class));
                 }
             });
         }
@@ -66,12 +65,9 @@ public class DataKehamilan extends AppCompatActivity {
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
     }
 
     public void setUsiaHamil(){
-        int result = 0;
         String hpht = shapref.getString("hpmt",null);
         if (hpht!=null){
             try {
@@ -82,15 +78,12 @@ public class DataKehamilan extends AppCompatActivity {
                 cal.add(Calendar.MONTH, -3);//subs 3
                 cal.add(Calendar.YEAR, 1);//add1
                 DateTime dt = new DateTime(cal);
-                usiahamil.setText(Weeks.weeksBetween(dt,new DateTime(new Date()))+" mng.");
+                usiahamil.setText(Weeks.weeksBetween(dt,new DateTime(new Date())).toString()+" mng.");
                 takspersa.setText(sdf.format(cal.getTime()));
             } catch (ParseException e) {
                 takspersa.setText("Invalid Date Format");
                 e.printStackTrace();
             }
-
         }
-
     }
-
 }

@@ -27,4 +27,5 @@ dependencies {
     compile 'com.android.support:support-v4:23.2.1'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'joda-time:joda-time:2.9.3'
+    compile 'com.android.support:support-v13:+'
 }

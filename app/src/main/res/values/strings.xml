@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SahabatBunda</string>
+    <string name="app_name">Sahabat Bunda</string>
     <string name="title_activity_main">Sahabat Bunda</string>
     <string name="title_activity_ibuhamil">Menu Ibu Hamil</string>
     <string name="action_settings">Settings</string>
@@ -35,6 +35,6 @@
         <item>Lebih dari 10 tahun</item>
     </string-array>
     <string name="title_activity_amnesa">Amnesa</string>
-
+    <string name="title_activity_amnesa_pemeriksaan">Amnesa dan Pemeriskaan</string>
 
 </resources>

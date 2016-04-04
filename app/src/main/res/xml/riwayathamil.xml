@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.isa.sahabatbunda.DatePickerDialog
+        android:key="hpmt"
+        android:title="Hari Pertama Haid Terahir"
+        android:summary="Kapan hari pertama haid terahir"
+        />
+    <com.isa.sahabatbunda.NumberPickerDialog
+        android:key="taksiranminggu"
+        android:title="Taksiran minggu"
+        />
+    <com.isa.sahabatbunda.NumberPickerDialog
+        android:key="hamilke"
+        android:title="Taksiran minggu"
+        />
+    <com.isa.sahabatbunda.NumberPickerDialog
+        android:key="jumlahmelahirkan"
+        android:title="Taksiran minggu"
+        />
+    <com.isa.sahabatbunda.NumberPickerDialog
+        android:key="jumlahgugur"
+        android:title="Taksiran minggu"
+        />
+</PreferenceScreen>
