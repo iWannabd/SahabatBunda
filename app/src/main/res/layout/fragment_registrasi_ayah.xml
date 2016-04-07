@@ -1,0 +1,116 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.isa.sahabatbunda.Registrasi$PlaceholderFragment">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/namaayah"
+            android:hint="Nama Ayah"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/umurayah"
+            android:layout_below="@+id/namaayah"
+            android:layout_centerHorizontal="true"
+            android:hint="Umur">
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sukBangayah"
+            android:layout_below="@id/umurayah"
+            android:hint="Suku bangsa"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/agamaayah"
+            android:layout_below="@id/sukBangayah"
+            android:hint="Agama"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rtrwayah"
+            android:layout_below="@id/agamaayah"
+            android:hint="RT / RW"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kecamatanayah"
+            android:layout_below="@id/rtrwayah"
+            android:hint="Kecamatan"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pendidikanayah"
+            android:layout_below="@id/kecamatanayah"
+            android:hint="Pendidikan"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pekerjaanayah"
+            android:layout_below="@id/pendidikanayah"
+            android:hint="Pekerjaan"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noHPayah"
+            android:layout_below="@id/pekerjaanayah"
+            android:hint="Nomor HP"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/alamatayah"
+            android:layout_below="@id/noHPayah"
+            android:hint="Alamat"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kelurahanayah"
+            android:layout_below="@id/alamatayah"
+            android:hint="Kelurahan / Desa"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kotaayah"
+            android:layout_below="@id/kelurahanayah"
+            android:hint="Kota"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:id="@+id/simpan"
+            android:layout_below="@+id/kotaayah"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

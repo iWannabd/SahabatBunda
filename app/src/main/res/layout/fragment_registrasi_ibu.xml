@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.isa.sahabatbunda.Registrasi$PlaceholderFragment">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/namaIbu"
+        android:hint="Nama Ibu"
+        />
+
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/umuribu"
+        android:hint="Umur"
+        android:layout_below="@+id/namaIbu"
+        android:layout_centerHorizontal="true">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sukBangibu"
+        android:layout_below="@id/umuribu"
+        android:hint="Suku bangsa"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/agamaibu"
+        android:layout_below="@id/sukBangibu"
+        android:hint="Agama"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rtrwibu"
+        android:layout_below="@id/agamaibu"
+        android:hint="RT / RW"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kecamatanibu"
+        android:layout_below="@id/rtrwibu"
+        android:hint="Kecamatan"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pendidikanibu"
+        android:layout_below="@id/kecamatanibu"
+        android:hint="Pendidikan"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pekerjaanibu"
+        android:layout_below="@id/pendidikanibu"
+        android:hint="Pekerjaan"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noHPibu"
+        android:layout_below="@id/pekerjaanibu"
+        android:hint="Nomor HP"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alamatibu"
+        android:layout_below="@id/noHPibu"
+        android:hint="Alamat"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kelurahanibu"
+        android:layout_below="@id/alamatibu"
+        android:hint="Kelurahan / Desa"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kotaibu"
+        android:layout_below="@id/kelurahanibu"
+        android:hint="Kota"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/simpan"
+        android:layout_below="@+id/kotaibu"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+</ScrollView>

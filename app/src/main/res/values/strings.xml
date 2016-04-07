@@ -34,7 +34,15 @@
         <item>Lebih dari 2 tahun dan Kurang dari 10 tahun</item>
         <item>Lebih dari 10 tahun</item>
     </string-array>
+
+    <string-array name="jarak_kehamilan_value">
+        <item>2</item>
+        <item>2-10</item>
+        <item>10</item>
+    </string-array>
+
     <string name="title_activity_amnesa">Amnesa</string>
     <string name="title_activity_amnesa_pemeriksaan">Amnesa dan Pemeriskaan</string>
+    <string name="title_activity_registrasi">Registrasi</string>
 
 </resources>

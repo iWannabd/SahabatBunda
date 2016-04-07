@@ -67,13 +67,6 @@ public class Amnesa extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -88,16 +81,13 @@ public class Amnesa extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a FormAmnesa (defined as a static inner class below).
-            if (position+1==5){
-                return new PemeriksaanAmnesa();
-            }
-            return FormAmnesa.newInstance(position + 1);
+            return PemeriksaanAmnesa.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 5;
+            return 4;
         }
 
         @Override
@@ -111,8 +101,6 @@ public class Amnesa extends AppCompatActivity {
                     return "Keluhan";
                 case 3:
                     return "Pemerikasaan";
-                case 4:
-                    return "cek";
             }
             return null;
         }

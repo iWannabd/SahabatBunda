@@ -1,6 +1,7 @@
 package com.isa.sahabatbunda;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
@@ -29,29 +30,36 @@ public class NumberPickerDialog extends DialogPreference {
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
+        np.setMaxValue(100);
+        np.setMinValue(0);
         np.setValue(CurNum);
     }
 
     @Override
     protected void onDialogClosed(boolean positiveResult) {
         if(positiveResult){
-            CurNum = np.getValue();
-            persistInt(CurNum);
+            np.clearFocus();
+            int newValue = np.getValue();
+            if (callChangeListener(newValue)){
+                setValue(newValue);
+            }
         }
         super.onDialogClosed(positiveResult);
     }
 
     @Override
+    protected Object onGetDefaultValue(TypedArray a, int index) {
+        return a.getInt(index, 0);
+    }
+
+    @Override
     protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
-        int num=0;
-        if (restorePersistedValue){
-            if (defaultValue==null){
-                num = getPersistedInt(0);
-            }else {
-                num = getPersistedInt((int)defaultValue);
-            }
-        }else {
-            CurNum = num;
-        }
+        setValue(restorePersistedValue ? getPersistedInt(0) : (Integer) defaultValue);
+    }
+
+
+    public void setValue(int value) {
+        this.CurNum = value;
+        persistInt(this.CurNum);
     }
 }

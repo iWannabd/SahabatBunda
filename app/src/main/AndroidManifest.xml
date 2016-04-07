@@ -37,6 +37,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.isa.sahabatbunda.DataKehamilan" />
         </activity>
+        <activity
+            android:name=".Registrasi"
+            android:label="@string/title_activity_registrasi"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

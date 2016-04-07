@@ -1,5 +1,8 @@
 package com.isa.sahabatbunda;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -53,7 +56,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
+        SharedPreferences sp = this.getSharedPreferences("Data_dasar", Context.MODE_PRIVATE);
+        Boolean jadi = sp.getBoolean("lengkapibu",false) && sp.getBoolean("lengkapayah",false);
+        if (!jadi){
+            startActivity(new Intent(this,Registrasi.class));
+        }
+        TextView hello = (TextView) findViewById(R.id.Hello);
+        assert hello != null;
+        hello.setText(sp.getString("namaIbu","Pengguna"));
 
     }
 
