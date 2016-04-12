@@ -56,14 +56,11 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        //menyambut pengguna dengan ucapan halo
         SharedPreferences sp = this.getSharedPreferences("Data_dasar", Context.MODE_PRIVATE);
-        Boolean jadi = sp.getBoolean("lengkapibu",false) && sp.getBoolean("lengkapayah",false);
-        if (!jadi){
-            startActivity(new Intent(this,Registrasi.class));
-        }
         TextView hello = (TextView) findViewById(R.id.Hello);
         assert hello != null;
-        hello.setText(sp.getString("namaIbu","Pengguna"));
+        hello.setText("Selamat Datang "+sp.getString("namaIbu","Pengguna"));
 
     }
 

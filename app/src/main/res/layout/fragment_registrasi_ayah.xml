@@ -25,7 +25,8 @@
             android:id="@+id/umurayah"
             android:layout_below="@+id/namaayah"
             android:layout_centerHorizontal="true"
-            android:hint="Umur">
+            android:hint="Umur"
+            android:inputType="number">
         </EditText>
 
         <EditText
