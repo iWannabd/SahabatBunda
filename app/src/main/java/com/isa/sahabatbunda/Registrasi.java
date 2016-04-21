@@ -175,7 +175,7 @@ public class Registrasi extends AppCompatActivity {
                             }
                             //
                             if (lengkap){
-                                Toast.makeText(getContext(),"Data ibu Tersimpan",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(),"Data ibu Tersimpan, geser ke kanan untuk melanjutkan",Toast.LENGTH_LONG).show();
                             } else {
                                 Toast.makeText(getContext(),"Data ibu Belum Lengkap",Toast.LENGTH_SHORT).show();
                             }

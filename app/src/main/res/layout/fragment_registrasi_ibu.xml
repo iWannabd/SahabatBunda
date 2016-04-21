@@ -17,7 +17,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/namaIbu"
         android:hint="Nama Ibu"
-        />
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:inputType="number"
@@ -25,90 +27,221 @@
         android:layout_height="wrap_content"
         android:id="@+id/umuribu"
         android:hint="Umur"
-        android:layout_below="@+id/namaIbu"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     </EditText>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sukBangibu"
-        android:layout_below="@id/umuribu"
         android:hint="Suku bangsa"
-        />
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/agamaibu"
-        android:layout_below="@id/sukBangibu"
         android:hint="Agama"
-        />
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rtrwibu"
-        android:layout_below="@id/agamaibu"
         android:hint="RT / RW"
-        />
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kecamatanibu"
-        android:layout_below="@id/rtrwibu"
         android:hint="Kecamatan"
-        />
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pendidikanibu"
-        android:layout_below="@id/kecamatanibu"
         android:hint="Pendidikan"
-        />
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pekerjaanibu"
-        android:layout_below="@id/pendidikanibu"
         android:hint="Pekerjaan"
-        />
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/noHPibu"
-        android:layout_below="@id/pekerjaanibu"
         android:hint="Nomor HP"
-        />
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/alamatibu"
-        android:layout_below="@id/noHPibu"
         android:hint="Alamat"
-        />
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kelurahanibu"
-        android:layout_below="@id/alamatibu"
         android:hint="Kelurahan / Desa"
-        />
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kotaibu"
-        android:layout_below="@id/kelurahanibu"
         android:hint="Kota"
-        />
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simpan"
+        android:text="Lanjut"
         android:id="@+id/simpan"
         android:layout_below="@+id/kotaibu"
         android:background="@color/colorAccent"
         android:textColor="#fff"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nama Ibu"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Umur Ibu"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/namaIbu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Suku bangsa"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/umuribu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Agama"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/sukBangibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="RT / RW"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/agamaibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kecamatan"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/rtrwibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pendidikan"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/kecamatanibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pekerjaan"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/pendidikanibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nomor HP"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/noHPibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nomor HP"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/pekerjaanibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kelurahan Desa"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/alamatibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kota"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/kelurahanibu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
 

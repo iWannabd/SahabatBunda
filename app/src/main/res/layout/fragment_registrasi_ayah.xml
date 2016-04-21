@@ -16,90 +16,103 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/namaayah"
-            android:hint="Nama Ayah"
-            />
+            android:hint="Nama Suami"
+            android:layout_below="@+id/textView14"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/umurayah"
-            android:layout_below="@+id/namaayah"
-            android:layout_centerHorizontal="true"
             android:hint="Umur"
-            android:inputType="number">
+            android:inputType="number"
+            android:layout_below="@+id/textView15"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
         </EditText>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sukBangayah"
-            android:layout_below="@id/umurayah"
             android:hint="Suku bangsa"
-            />
+            android:layout_below="@+id/textView16"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/agamaayah"
-            android:layout_below="@id/sukBangayah"
             android:hint="Agama"
-            />
+            android:layout_below="@+id/textView17"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rtrwayah"
-            android:layout_below="@id/agamaayah"
             android:hint="RT / RW"
-            />
+            android:layout_below="@+id/textView18"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kecamatanayah"
-            android:layout_below="@id/rtrwayah"
             android:hint="Kecamatan"
-            />
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/pendidikanayah"
-            android:layout_below="@id/kecamatanayah"
             android:hint="Pendidikan"
-            />
+            android:layout_below="@+id/textView20"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/pekerjaanayah"
-            android:layout_below="@id/pendidikanayah"
             android:hint="Pekerjaan"
-            />
+            android:layout_below="@+id/textView21"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/noHPayah"
-            android:layout_below="@id/pekerjaanayah"
             android:hint="Nomor HP"
-            />
+            android:layout_below="@+id/textView22"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/alamatayah"
-            android:layout_below="@id/noHPayah"
             android:hint="Alamat"
-            />
+            android:layout_below="@+id/textView23"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kelurahanayah"
-            android:layout_below="@id/alamatayah"
             android:hint="Kelurahan / Desa"
-            />
+            android:layout_below="@+id/textView24"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kotaayah"
-            android:layout_below="@id/kelurahanayah"
             android:hint="Kota"
-            />
+            android:layout_below="@+id/textView25"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -110,6 +123,126 @@
             android:background="@color/colorAccent"
             android:textColor="#fff"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Nama suami"
+            android:id="@+id/textView14"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Umur Suami"
+            android:id="@+id/textView15"
+            android:layout_below="@+id/namaayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Suku Bangsa"
+            android:id="@+id/textView16"
+            android:layout_below="@+id/umurayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Agama"
+            android:id="@+id/textView17"
+            android:layout_below="@+id/sukBangayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="RT / RW"
+            android:id="@+id/textView18"
+            android:layout_below="@+id/agamaayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Kecamatan"
+            android:id="@+id/textView19"
+            android:layout_below="@+id/rtrwayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Pendidikan"
+            android:id="@+id/textView20"
+            android:layout_below="@+id/kecamatanayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Pekerjaan"
+            android:id="@+id/textView21"
+            android:layout_below="@+id/pendidikanayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Nomor HP"
+            android:id="@+id/textView22"
+            android:layout_below="@+id/pekerjaanayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Alamat"
+            android:id="@+id/textView23"
+            android:layout_below="@+id/noHPayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Kelurahan Desa"
+            android:id="@+id/textView24"
+            android:layout_below="@+id/alamatayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Kota"
+            android:id="@+id/textView25"
+            android:layout_below="@+id/kelurahanayah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>
