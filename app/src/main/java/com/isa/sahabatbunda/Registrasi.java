@@ -46,7 +46,7 @@ public class Registrasi extends AppCompatActivity implements RegistrasiFragment.
         mViewPager.setAdapter(mSectionsPagerAdapter);
         //mengecek apakah data ayah dan ibu sudah lengkap
         SharedPreferences sp = this.getSharedPreferences("Data_dasar", Context.MODE_PRIVATE);
-        Boolean lengkap = sp.getBoolean("lengkapibu",false) && sp.getBoolean("lengkapayah",false);
+        Boolean lengkap = false;
         if (lengkap){
             Intent utama = new Intent(this, MainActivity.class);
             utama.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -56,8 +56,8 @@ public class Registrasi extends AppCompatActivity implements RegistrasiFragment.
 
     }
 
-    public void Geser(){
-        mViewPager.setCurrentItem(2);
+    public void Geser(int pos){
+        mViewPager.setCurrentItem(pos);
     }
 
 

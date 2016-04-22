@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         SharedPreferences sp = this.getSharedPreferences("Data_dasar", Context.MODE_PRIVATE);
         TextView hello = (TextView) findViewById(R.id.Hello);
         assert hello != null;
-        hello.setText("Selamat Datang "+sp.getString("namaIbu","Pengguna"));
+        hello.setText("Selamat Datang "+getIntent().getStringExtra("SESSION_UNAME"));
 
     }
 

@@ -2,7 +2,9 @@ package com.isa.sahabatbunda;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 
 
@@ -18,21 +20,29 @@ import okhttp3.Response;
 /**
  * Created by node06 on 21/04/2016.
  */
-public class UploadDataRegistrasi extends AsyncTask<String,Void,String> {
+public class UploadDataRegistrasi extends AsyncTask<String[],Void,String> {
     Context context;
     Registrasi activity;
-    public UploadDataRegistrasi(Context context,Activity activity) {
+    String url;
+    Boolean flag; // true if login false if sign up // menandai apakah data yang dikirim untuk login atau signup
+
+    public UploadDataRegistrasi(Context context,Activity activity,String url,Boolean flag) {
         this.context = context;
         this.activity = (Registrasi) activity;
+        this.url = url;
+        this.flag = flag;
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        Okhttp ok = new Okhttp();
-
-//            String result = ok.doPostRequestDataIbu("http://sahabatbundaku.org/request_android/registrasi.php",params);
-//            return result;
-
+    protected String doInBackground(String[]... params) {
+        Okdeh ok = new Okdeh();
+        try {
+            String s = ok.doPostRequestDataDasar(url,params[0],params[1]);
+            return s;
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.d("BISA", "doInBackground: "+e);
+        }
         return "-1";
     }
 
@@ -45,30 +55,45 @@ public class UploadDataRegistrasi extends AsyncTask<String,Void,String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        switch (s){
-            case "0":
-                Toast.makeText(context,"Data belum valid",Toast.LENGTH_SHORT).show();
-                break;
-            case "-1":
-                Toast.makeText(context,"Sepertinya perangkat tidak terhubung ke internet",Toast.LENGTH_LONG).show();
-                break;
-            case "1":
-                Toast.makeText(context,"Data tersimpan",Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                Toast.makeText(context,s,Toast.LENGTH_LONG).show();
-                break;
+        //if flag true then do login respones handle
+        if (flag){
+            switch (s){
+                case "1": //jika login gagal
+                    Toast.makeText(context, "Username atau Password Salah", Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    Intent utama = new Intent(context, MainActivity.class);
+                    utama.putExtra("SESSION_UNAME",s);
+                    utama.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    activity.startActivity(utama);
+                    break;
+            }
+
+        } else {
+            // if false then do sign up respones handle
+            switch (s) {
+                case "0": //jika data belum valid menurut server
+                    Toast.makeText(context, "Data belum valid", Toast.LENGTH_SHORT).show();
+                    break;
+                case "-1": //jika tidak terkoneksi
+                    Toast.makeText(context, "Sepertinya perangkat tidak terhubung ke internet", Toast.LENGTH_LONG).show();
+                    break;
+                case "1": //jika berhasil
+                    Toast.makeText(context, "Data tersimpan, Silahkan Login", Toast.LENGTH_SHORT).show();
+                    activity.Geser(0);
+                    break;
+                default:
+                    Toast.makeText(context, s, Toast.LENGTH_LONG).show();
+                    break;
+            }
         }
-
-
-
 
     }
 
-    public class Okhttp {
+    public class Okdeh {
         OkHttpClient client = new OkHttpClient();
         // code request code here
-        String doPostRequestDataIbu(String url, String[] values,String[] keys) throws IOException {
+        String doPostRequestDataDasar(String url, String[] keys, String[] values) throws IOException {
             MultipartBody.Builder feb = new MultipartBody.Builder()
                     .setType(MultipartBody.FORM);
 

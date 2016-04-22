@@ -1,7 +1,6 @@
 package com.isa.sahabatbunda;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -44,7 +44,7 @@ public class RegistrasiFragment extends Fragment {
     OnNextButtonPressed mCallback;
 
     public interface OnNextButtonPressed{
-        public void Geser();
+        public void Geser(int pos);
     }
 
     @Override
@@ -72,6 +72,28 @@ public class RegistrasiFragment extends Fragment {
         for (int i = 0; i < dadkeys.length; i++) {
             dadvalues[i] = sp.getString(dadkeys[i],"kosong");
         }
+//        mengabungkan semua kunci untuk http request post
+        String allkeys[] = new String[momkeys.length+dadkeys.length];
+        for (int i = 0; i < momkeys.length; i++) {
+            allkeys[i] = momkeys[i];
+        }
+        System.out.println("____");
+        for (int i = momkeys.length; i < allkeys.length; i++) {
+            allkeys[i] = dadkeys[i-momkeys.length];
+        }
+        // menggabungkan valus untuk http post request
+
+        String allvalues[] = new String[momvalues.length+dadvalues.length];
+        for (int i = 0; i < momkeys.length; i++) {
+            allvalues[i] = momvalues[i];
+        }
+        System.out.println("____");
+        for (int i = momkeys.length; i < allkeys.length; i++) {
+            allvalues[i] = dadvalues[i-momkeys.length];
+        }
+
+        new UploadDataRegistrasi(getContext(),getActivity(),"http://sahabatbundaku.org/request_android/registrasi.php",false).execute(allkeys,allvalues);
+
 
     }
 
@@ -125,14 +147,11 @@ public class RegistrasiFragment extends Fragment {
                                 break;
                             }
                         }
-
-                        //
                         if (lengkap){
-                            mCallback.Geser();
+                            mCallback.Geser(2);
                         } else {
                             Toast.makeText(getContext(),"Data ibu Belum Lengkap",Toast.LENGTH_SHORT).show();
                         }
-                        editor.putBoolean("lengkapibu", lengkap);
                         editor.commit();
                     }
                 });
@@ -171,32 +190,51 @@ public class RegistrasiFragment extends Fragment {
                                 lengkap = false;
                                 break;
                             }
-
                         }
-
                         if (lengkap){
                             editor.putBoolean("lengkapayah", lengkap);
-                            Toast.makeText(getContext(),"Data ayah Tersimpan",Toast.LENGTH_SHORT).show();
-                            Intent utama = new Intent(getContext(), MainActivity.class);
-                            utama.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(utama);
                         } else {
                             Toast.makeText(getContext(),"Data ayah belum lengkap",Toast.LENGTH_SHORT).show();
                         }
-                        editor.putBoolean("lengkapayah", lengkap);
                         editor.commit();
-
                         putToMySQLDataBase();
                     }
                 });
                 break;
             case 1:
-                rootView = inflater.inflate(R.layout.fragment_welcome, container, false);
+                rootView = inflater.inflate(R.layout.fragment_login, container, false);
+                rootView = LoginFragment(rootView);
                 break;
             default:
                 return null;
         }
         return rootView;
 
+    }
+    public View LoginFragment(View v){
+
+        final EditText uname = (EditText) v.findViewById(R.id.input_username);
+        final EditText passwd = (EditText) v.findViewById(R.id.input_password);
+        Button login = (Button) v.findViewById(R.id.btn_login);
+        TextView signup = (TextView) v.findViewById(R.id.link_signup);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.Geser(1);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String values[] = {uname.getText().toString(),passwd.getText().toString()};
+                String keys[] = {"username","passwd"};
+
+                new UploadDataRegistrasi(getContext(),getActivity(),"http://sahabatbundaku.org" +
+                        "/request_android/do_login.php",true)
+                        .execute(keys,values);
+            }
+        });
+        return v;
     }
 }
