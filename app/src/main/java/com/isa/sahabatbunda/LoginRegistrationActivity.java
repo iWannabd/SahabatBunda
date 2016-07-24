@@ -13,7 +13,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Registrasi extends AppCompatActivity implements RegistrasiFragment.OnNextButtonPressed{
+public class LoginRegistrationActivity extends AppCompatActivity implements RegistrasiFragment.OnNextButtonPressed{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

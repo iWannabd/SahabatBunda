@@ -11,7 +11,7 @@
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
     android:paddingTop="35dp"
-    tools:context="com.isa.sahabatbunda.IbuHamil"
+    tools:context=".Ibu.IbuHamil"
     >
 
     <ImageButton

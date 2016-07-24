@@ -22,13 +22,13 @@ import okhttp3.Response;
  */
 public class UploadDataRegistrasi extends AsyncTask<String[],Void,String> {
     Context context;
-    Registrasi activity;
+    LoginRegistrationActivity activity;
     String url;
     Boolean flag; // true if login false if sign up // menandai apakah data yang dikirim untuk login atau signup
 
     public UploadDataRegistrasi(Context context,Activity activity,String url,Boolean flag) {
         this.context = context;
-        this.activity = (Registrasi) activity;
+        this.activity = (LoginRegistrationActivity) activity;
         this.url = url;
         this.flag = flag;
     }

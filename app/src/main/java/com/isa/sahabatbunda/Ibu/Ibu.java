@@ -1,4 +1,4 @@
-package com.isa.sahabatbunda;
+package com.isa.sahabatbunda.Ibu;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.isa.sahabatbunda.OnFragmentInteractionListener;
+import com.isa.sahabatbunda.R;
 
 
 public class Ibu extends Fragment implements OnFragmentInteractionListener {

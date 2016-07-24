@@ -1,4 +1,4 @@
-package com.isa.sahabatbunda;
+package com.isa.sahabatbunda.Ibu;
 
 import android.content.Intent;
 import android.provider.ContactsContract;
@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.isa.sahabatbunda.DataKehamilan;
+import com.isa.sahabatbunda.R;
 
 public class IbuHamil extends AppCompatActivity {
 
